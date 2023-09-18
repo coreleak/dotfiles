@@ -29,7 +29,6 @@ return {
     {
         "akinsho/bufferline.nvim",
         branch = "main",
-        event = "User FileOpened",
         dependencies = {
             "nvim-tree/nvim-web-devicons",
         },
