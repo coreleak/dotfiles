@@ -4,6 +4,7 @@ return {
         version = "*",
         lazy = false,
         dependencies = {
+            "nvim-tree/nvim-web-devicons",
         },
         config = function()
             require "plugins.nvim-tree"
@@ -53,12 +54,21 @@ return {
         lazy = true,
     },
     {
-        "navarasu/onedark.nvim",
+        "folke/tokyonight.nvim",
         lazy = false,
         priority = 1000,
         config = function()
-            -- load here
-            vim.cmd([[colorscheme onedark]])
+            require "plugins.tokyonight"
+            vim.cmd([[colorscheme tokyonight]])
         end,
     },
+    -- {
+    --     "navarasu/onedark.nvim",
+    --     lazy = false,
+    --     priority = 1000,
+    --     config = function()
+    --         -- load here
+    --         vim.cmd([[colorscheme onedark]])
+    --     end,
+    -- },
 }

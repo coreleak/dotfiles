@@ -15,7 +15,7 @@ local plugins = require "plugins.lazyload.plugins"
 require("lazy").setup(plugins, {
     install = {
         colorscheme = {
-            "onedark"
+            "tokyonight-moon"
         },
     },
 })
