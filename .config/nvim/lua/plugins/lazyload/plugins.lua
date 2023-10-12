@@ -54,21 +54,12 @@ return {
         lazy = true,
     },
     {
-        "folke/tokyonight.nvim",
+        "catppuccin/nvim",
+        name = "catppuccin",
         lazy = false,
         priority = 1000,
         config = function()
-            require "plugins.tokyonight"
-            vim.cmd([[colorscheme tokyonight]])
+            require "plugins.catppuccin"
         end,
     },
-    -- {
-    --     "navarasu/onedark.nvim",
-    --     lazy = false,
-    --     priority = 1000,
-    --     config = function()
-    --         -- load here
-    --         vim.cmd([[colorscheme onedark]])
-    --     end,
-    -- },
 }
