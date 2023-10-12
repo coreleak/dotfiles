@@ -1,0 +1,160 @@
+@import "macchiato.css";
+
+* {
+    font-family: FiraCode Nerd Font, FontAwesome, Arial, sans-serif;
+    font-size: 18px;
+    min-height: 0;
+
+    border: none;
+    border-radius: 0;
+}
+
+/* hyprland compatibility */
+*:hover {
+    border: none;
+    background: none;
+
+    box-shadow: none;
+    text-shadow: none;
+    transition: none;
+}
+
+#waybar {
+    /* background-color: rgba(43, 48, 59, 0.2); */
+    background-color: transparent;
+    color: @text;
+}
+
+#workspaces {
+    margin: 5px;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: @lavender;
+}
+
+#workspaces button.active {
+    color: @sky;
+    background-color: @surface0;
+}
+
+#workspaces button.focused {
+    color: @sky;
+    background-color: @surface0;
+}
+
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#tray {
+    background-color: transparent;
+    padding: 0 10px;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+#clock {
+    color: @mauve;
+}
+
+#battery {
+    color: @green;
+    margin-right: 10px;
+}
+
+#battery.charging, #battery.plugged {
+    color: @green;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: @red;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: @surface0;
+}
+
+#cpu {
+    color: @green;
+}
+
+#memory {
+    color: @teal;
+}
+
+#network {
+    color: @blue;
+}
+
+#network.disconnected {
+    color: #f53c3c;
+}
+
+#pulseaudio {
+    color: @yellow;
+}
+
+#pulseaudio.muted {
+    color: #90b1b1;
+}
+
+#temperature {
+    color: @flamingo;
+}
+
+#temperature.critical {
+    color: #eb4d4b;
+}
+
+#tray {
+    color: @blue;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#keyboard-state {
+    color: @green;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+tooltip {
+    background: @surface0;
+}
