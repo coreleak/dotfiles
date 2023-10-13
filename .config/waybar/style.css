@@ -9,16 +9,6 @@
     border-radius: 0;
 }
 
-/* hyprland compatibility */
-*:hover {
-    border: none;
-    background: none;
-
-    box-shadow: none;
-    text-shadow: none;
-    transition: none;
-}
-
 #waybar {
     /* background-color: rgba(43, 48, 59, 0.2); */
     background-color: transparent;
@@ -43,6 +33,16 @@
 #workspaces button.focused {
     color: @sky;
     background-color: @surface0;
+}
+
+/* hyprland compatibility */
+#workspaces button:hover {
+    border: none;
+    background: @surface0;
+
+    box-shadow: none;
+    text-shadow: none;
+    transition: none;
 }
 
 #battery,
