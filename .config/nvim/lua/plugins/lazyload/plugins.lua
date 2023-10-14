@@ -46,6 +46,13 @@ return {
         end,
     },
     {
+        "lewis6991/gitsigns.nvim",
+        event = "User FileOpened",
+        init = function()
+            require("gitsigns").setup()
+        end,
+    },
+    {
         "folke/which-key.nvim",
         event = "VeryLazy",
         init = function()
