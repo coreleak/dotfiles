@@ -14,6 +14,7 @@
 - **Editor** [Neovim]  
 - **Audio Control** Pamixer  
 - **Screenshot** [Grim] with [Slurp]  
+- **Wallpapers** [Swww]  
 - **Font** FiraCode Nerd Font, SymbolOnly Nerd Font, Joypixels Font  
 - **Theme** [Catppuccin-macchiato]
 
@@ -32,5 +33,6 @@ You can get this wallpaper from [here](https://www.reddit.com/r/anime/comments/c
 [Neovim]: https://neovim.io  
 [Starship]: https://starship.rs  
 [Grim]: https://sr.ht/~emersion/grim  
-[Slurp]: https://github.com/emersion/slurp
+[Slurp]: https://github.com/emersion/slurp  
+[Swww]: https://github.com/Horus645/swww
 [Catppuccin-macchiato]: https://github.com/catppuccin/catppuccin
