@@ -17,9 +17,7 @@ return {
         dependencies = {
             "nvim-treesitter/nvim-treesitter"
         },
-        config = function()
-            require "plugins.indent-blankline"
-        end,
+        opts = {},
     },
     {
         "nvim-lualine/lualine.nvim",
