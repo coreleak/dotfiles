@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "keyboard-state"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "pulseaudio", "network", "cpu", "memory", "temperature", "battery"],
+    "modules-right": ["tray", "pulseaudio#sink", "pulseaudio#source", "network", "cpu", "memory", "temperature", "battery"],
 
     // Modules configuration
     "hyprland/workspaces": {
@@ -93,14 +93,12 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "tooltip": false
     },
-    "pulseaudio": {
+    "pulseaudio#sink": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": "󰗿 {icon} {format_source}",
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": "󰗿 {icon}",
         "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "󰂰",
@@ -114,5 +112,14 @@
         "on-click": "pamixer -i 5",
         "on-click-right": "pamixer -d 5"
     },
+    "pulseaudio#source": {
+        "format": "{format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "tooltip": false,
+        "on-click": "pamixer --default-source -t",
+        "on-scroll-up": "pamixer --default-source -i 1",
+        "on-scroll-down": "pamixer --default-source -d 1"
+    }
 }
 

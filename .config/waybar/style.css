@@ -120,8 +120,12 @@ label:focus {
     color: @yellow;
 }
 
-#pulseaudio.muted {
-    color: #90b1b1;
+#pulseaudio.sink {
+    padding-right: 2px;
+}
+
+#pulseaudio.source {
+    padding-left: 2px;
 }
 
 #temperature {
