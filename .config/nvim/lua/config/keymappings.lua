@@ -11,3 +11,5 @@ keymap.set({"n", "v", "i"}, "<C-T>", function() vim.cmd(":ToggleTerm") end, { de
 keymap.set({"n", "v", "i"}, "<C-P>", function() vim.cmd(":BufferLinePick") end, { desc = "bufferline: BufferLine Pick" })
 keymap.set({"n", "v", "i"}, "<C-O>", function() vim.cmd(":BufferLinePickClose") end, { desc = "bufferline: BufferLine Pick Close" })
 
+-- none-ls format
+keymap.set({"n", "v", "i"}, "<C-M-L>", function() vim.lsp.buf.format() end, { desc = "none-ls: Format all lines" })

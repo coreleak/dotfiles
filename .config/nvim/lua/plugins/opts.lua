@@ -1,5 +1,10 @@
 return {
     {
+        "nvim-lua/plenary.nvim",
+        cmd = { "PlenaryBustedFile", "PlenaryBustedDirectory" },
+        lazy = true,
+    },
+    {
         "nvim-tree/nvim-tree.lua",
         version = "*",
         lazy = false,
@@ -69,6 +74,24 @@ return {
         ft = { "markdown" },
         build = function()
             vim.fn["mkdp#util#install"]()
+        end,
+    },
+    {
+        "nvimtools/none-ls.nvim",
+        init = function()
+            require "plugins.none-ls"
+        end,
+        event = "User FileOpened",
+    },
+    {
+        "williamboman/mason.nvim",
+        opts = {
+            registries = {
+                "github:mason-org/mason-registry",
+            },
+        },
+        config = function(_, opts)
+            require("mason").setup(opts)
         end,
     },
     {
