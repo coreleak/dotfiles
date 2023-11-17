@@ -1,6 +1,6 @@
 -- vim default options
-require "config.opts"
+require("config.opts")
 -- plugin manager
-require "plugins"
+require("plugins")
 -- key mappings
-require "config.keymappings"
+require("config.keymappings")
