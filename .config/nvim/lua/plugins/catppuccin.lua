@@ -4,4 +4,4 @@ require("catppuccin").setup({
 })
 
 -- loading color scheme
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme("catppuccin")

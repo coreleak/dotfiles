@@ -11,11 +11,11 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = require "plugins.opts"
+local plugins = require("plugins.opts")
 require("lazy").setup(plugins, {
     install = {
         colorscheme = {
-            "catppuccin"
+            "catppuccin",
         },
     },
 })

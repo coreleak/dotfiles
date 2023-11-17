@@ -1,5 +1,10 @@
 return {
     {
+        "nvim-lua/plenary.nvim",
+        cmd = { "PlenaryBustedFile", "PlenaryBustedDirectory" },
+        lazy = true,
+    },
+    {
         "nvim-tree/nvim-tree.lua",
         version = "*",
         lazy = false,
@@ -7,7 +12,7 @@ return {
             "nvim-tree/nvim-web-devicons",
         },
         config = function()
-            require "plugins.nvim-tree"
+            require("plugins.nvim-tree")
         end,
     },
     {
@@ -15,7 +20,7 @@ return {
         event = "VeryLazy",
         main = "ibl",
         dependencies = {
-            "nvim-treesitter/nvim-treesitter"
+            "nvim-treesitter/nvim-treesitter",
         },
         opts = {},
     },
@@ -23,7 +28,7 @@ return {
         "nvim-lualine/lualine.nvim",
         event = "VimEnter",
         config = function()
-            require "plugins.lualine"
+            require("plugins.lualine")
         end,
     },
     {
@@ -33,14 +38,14 @@ return {
             "nvim-tree/nvim-web-devicons",
         },
         config = function()
-            require "plugins.bufferline"
+            require("plugins.bufferline")
         end,
     },
     {
         "akinsho/toggleterm.nvim",
         branch = "main",
         config = function()
-            require "plugins.toggleterm"
+            require("plugins.toggleterm")
         end,
     },
     {
@@ -64,7 +69,7 @@ return {
         cmd = {
             "MarkdownPreviewToggle",
             "MarkdownPreview",
-            "MarkdownPreviewStop"
+            "MarkdownPreviewStop",
         },
         ft = { "markdown" },
         build = function()
@@ -72,13 +77,31 @@ return {
         end,
     },
     {
+        "nvimtools/none-ls.nvim",
+        init = function()
+            require("plugins.none-ls")
+        end,
+        event = "User FileOpened",
+    },
+    {
+        "williamboman/mason.nvim",
+        opts = {
+            registries = {
+                "github:mason-org/mason-registry",
+            },
+        },
+        config = function(_, opts)
+            require("mason").setup(opts)
+        end,
+    },
+    {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         opts = {
-                ensure_installed = { "c", "cpp", "lua", "vim", "vimdoc", "javascript", "html" },
-                sync_install = false,
-                highlight = { enable = true },
-                indent = { enable = true },
+            ensure_installed = { "c", "cpp", "lua", "vim", "vimdoc", "javascript", "html" },
+            sync_install = false,
+            highlight = { enable = true },
+            indent = { enable = true },
         },
         config = function(_, opts)
             require("nvim-treesitter.configs").setup(opts)
@@ -94,7 +117,7 @@ return {
         lazy = false,
         priority = 1000,
         config = function()
-            require "plugins.catppuccin"
+            require("plugins.catppuccin")
         end,
     },
 }
